@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chk boxes</title>
+    <script>
+        function validation(){
+            var valid = false;
+
+            if(document.getElementById("javaScript").checked){
+                valid = true;
+            }
+            else if(document.getElementById("jQuery").checked){
+                valid = true;
+            }
+            else if(document.getElementById("angularJS").checked){
+                valid = true;
+            }
+            else if(document.getElementById("nodeJS").checked){
+                valid = true;
+            }
+
+            if (valid== true){
+                alert ("validation successfull");
+            }
+            else {
+                alert("select atleast one checkbox")
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h2>Select languages</h2>
+    <form action="#" name="myForm" onsubmit="return validation()">
+        <input type="checkbox" id="javaScript" value="javaScript"> javaScript
+        <input type="checkbox" id="jQuery" value="jQuery"> jQuery
+        <input type="checkbox" id="angularJS" value="angularJS"> angularJS
+        <input type="checkbox" id="nodeJS" value="nodeJS"> nodeJS 
+
+
+
+
+        <input type="submit" value="submit">
+    
+    </form> 
+        
+
+
+    </form>
+    
+</body>
+</html>

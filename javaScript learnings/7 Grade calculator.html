@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Applicationt</title>
+</head>
+<body>
+    <script>
+        function grade_calc (){
+            var math = parseInt(prompt("Enter the marks of Math"));
+        var phy = parseInt(prompt("Enter the marks of physics "));
+        var che = parseInt(prompt("Enter the marks of chemistry "));
+        var avg = (math+phy+che)/3 ;  
+        if(avg < 70 ){
+        document.write("C grade");
+        }
+        else if(avg < 90){
+            document.write("B grade");
+        }
+        else {
+            document.write("A grade");
+        }
+        }
+
+        grade_calc();
+
+    </script>
+</body>
+</html>

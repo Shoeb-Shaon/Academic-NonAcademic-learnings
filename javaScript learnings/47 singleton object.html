@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singleton object</title>
+    <script>
+        var blogPost = new function (){
+            this.title = "Ruby on rails"
+            this.text = "Rapid web"
+            this.display = function(){
+                document.write(this.title + "<br/>");
+                document.write(this.text);
+            }
+        }
+
+        blogPost.display();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onClick calculator</title>
+
+    <script>
+        function calculator(a){
+        var x = parseInt(document.calcform.num1.value);
+        var y = parseInt(document.calcform.num2.value);
+        var z = document.calcform.result;
+        a.style.color="red"
+        
+        switch(a.value){
+                case "Add":
+                    z.value = x+y;
+                    break;
+                case "Sub":
+                    z.value = x-y;
+                    break;
+                case "Mul":
+                    z.value = x+y;
+                    break;
+                case "Mod":
+                    z.value = x%y;
+                    break;
+            }
+        } 
+
+        // if(a.value=="Add"){
+        //         z.value = x+y;
+        //     }
+        //     else if(a.value=="Sub"){
+        //         z.value = x-y;
+        //     }
+        //     else if(a.value=="Mul"){
+        //         z.value = x*y;
+        //     }
+        //     else{
+        //         z.value = x%y;
+        //     }
+    </script>
+</head>
+<body>
+    <form name="calcform">
+        Number1: <input type="text" name="num1"> <br>
+        Number1: <input type="text" name="num2"> <br>
+        Result : <input type="text" name="result"> <br>
+        <input type="button" name="Add" value="Add" onclick="calculator(this)" > 
+        <input type="button" name="Sub" value="Sub" onclick="calculator(this)" > 
+        <input type="button" name="Mul" value="Mul" onclick="calculator(this)" > 
+        <input type="button" name="Mod" value="Mod" onclick="calculator(this)" >
+    </form>
+</body>
+</html>

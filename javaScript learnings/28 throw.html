@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw</title>
+    <script>
+        function validAge(){
+            try {
+                var x = document.getElementById("age").value;
+                if(x ==""){
+                    throw "Age can not be empty"
+                }
+                if(x < 18){
+                    throw "Under aged" ;
+                }
+                else {
+                    throw "Good to go" ;
+                }
+            } catch (obj) {
+                document.getElementById("errorInfo").innerHTML = obj;
+            }
+
+            finally {
+                document.getElementById("finallyInfo").innerHTML= " Final Info"
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    Age: <input type="text" id="age" >
+    <input type="button" onclick="validAge()" value="Submit">
+    <p id="errorInfo"></p>
+    <p id="finallyInfo"></p>
+</body>
+</html>

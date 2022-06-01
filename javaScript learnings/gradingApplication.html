@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Applicationt</title>
+</head>
+<body>
+    <script>
+        var javaScript = parseInt(prompt("Enter the marks of javaScript"));
+        var java = parseInt(prompt("Enter the marks of java "));
+        var net = parseInt(prompt("Enter the marks of .NET "));
+        var total = javaScript+java+net;
+        if(total >=35 ){
+            document.write("Pass" +"<br>");
+            if(total<=59){
+                document.write("C");
+            }
+            else if (total <= 69){
+                document.write("B");
+            }
+            else {
+                document.write("A");
+            }
+        }
+        else{
+            document.write("Fail");
+        }
+
+    </script>
+</body>
+</html>

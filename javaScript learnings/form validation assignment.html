@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation Assignment</title>
+    <script>
+        function validation (){
+
+            var valid = false;
+            var email = document.form.email.value;
+            var password = document.form.password.value;
+            var phone = document.form.phone.value;
+
+            var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+            var passExp = /^[A-Za-z0-9]{5,8}$/;
+            var phoneExp = /^[0-9]{10}$/ ;
+
+            var resultEmail = emailExp.test(email);
+            var resultPass = passExp.test(password);
+            var resultPhone = resultPhone.test(phone);
+
+
+            if(resultEmail && resultPass && resultPhone){
+                alert ("Validation Successful!"); 
+            }
+
+            else {
+                alert ("Validation failed ")
+                
+                if(resultEmail == false){
+                    alert ("input correct email");
+                    document.form.email.focus();
+                    return false;
+                }
+
+                else if (resultPass == false){
+                alert ("input correct form of password");
+                    document.form.password.focus();
+                    return false;
+                }
+                else{
+                    alert ("input correct form of phone number");
+                    document.form.phone.focus();
+                    return false;
+                }
+            }
+
+            
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="#" name="form" onsubmit=" return validation()">
+    Email: <input type="email" name="email" >
+    password: <input type="password" name="password">
+    phone: <input type="tel" name="phone"> <br>
+
+    <input type="submit" name="submit">
+    </form>
+</body>
+</html>

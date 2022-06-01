@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function signUp(x){
+        var fname = document.signUpForm.value.fname;
+        var lname = document.signUpForm.value.lname;
+        var email = document.signUpForm.value.email;
+        var conEmail = document.signUpForm.value.conEmail;
+        var phone = document.signUpForm.value.phone;
+        
+        
+        
+        }
+    </script>
+</head>
+<body>
+    <form name="signUpForm" >
+        First Name: <input type="text" name="fname">
+        Last Name: <input type="text" name="lname"> <br>
+        Email: <input type="email" name="email"> <br>
+        Confirm mail: <input type="email" name="conEmail"> <br>
+        phone no. <input type="tel" name="phone">
+        <input type="button" value="Submit" onclick="signUp(this)">
+
+
+    </form>
+</body>
+</html>

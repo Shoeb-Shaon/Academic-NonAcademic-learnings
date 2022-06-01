@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnFocus</title>
+    <script>
+        function handleOnKeyDown(x){
+            x.style.color="red"
+            x.style.backgroundColor="blue"; 
+
+        }
+
+        function handleOnKeyUp (x){
+            x.style.color="blue"
+            x.style.backgroundColor="red"; 
+        }
+        function handleOnkeyPress (x){
+            x.style.color="green"
+            x.style.backgroundColor="gray"; 
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text"  onkeydown="handleOnKeyDown(this)" onkeyup="handleOnKeyUp(this)" onkeypress="handleOnkeyPress(this)"/>
+    
+</body>
+</html>

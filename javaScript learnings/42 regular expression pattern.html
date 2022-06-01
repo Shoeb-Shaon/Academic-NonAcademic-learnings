@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+    <script>
+        function validation(){
+            var valid = false;
+            var exp = /^[A-z a-z]+$/;
+            var userName = document.myForm.name.value;
+            var result =exp.test(userName);
+
+            if(result){
+                alert("successfull");
+            }
+            else {
+                alert("validation failed ");
+                document.myForm.name.focus(); 
+                return false;
+            }
+
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h2>User registration</h2>
+    <form action="#" name="myForm" onsubmit="return validation()">
+        User Name: <input type="text" name="name">
+        
+        <input type="submit" value="submit">
+    
+    </form> 
+        
+
+
+    </form>
+    
+</body>
+</html>

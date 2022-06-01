@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Creat object</title>
+    <script>
+      function productDetails(ID, Name, Description, Price) {
+        this.ID = ID;
+        this.Name = Name;
+        this.Description = Description;
+        this.Price = Price;
+        this.calculateDisc = calculateDisc;
+        this.displayProductDetails = displayProductDetails;
+      }
+
+      function calculateDisc(percentage) {
+        this.percentage = percentage;
+        this.Price = this.Price - this.Price * this.percentage;
+        return this.Price;
+      }
+
+      function displayProductDetails() {
+        document.write(this.ID + "<br />");
+        document.write(this.Name + "<br />");
+        document.write(this.Description + "<br />");
+        document.write(this.calculateDisc(0.2));
+      }
+
+      var Car = new productDetails("12345", "Ferrari", "Nice car", 100000);
+      Car.displayProductDetails();
+    </script>
+  </head>
+  <body></body>
+</html>

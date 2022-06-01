@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom object using Function</title>
+    <script>
+        function blogPost (title,text){
+            this.title = title;
+            this.text = text;
+            this.addCatagory = addCatagory;
+            this.display = display;
+        }
+
+        function addCatagory (catagory){
+            this.catagory = catagory;
+        }
+
+        function display(){
+        document.write(bp1.title+ "<br/>")
+        document.write(bp1.text+ "<br/>");
+        document.write(bp1.catagory);
+
+        }
+
+        var bp1 = new blogPost ("JavaScript", "Hello");
+        bp1.addCatagory("UI tecnology")
+
+        bp1.display();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

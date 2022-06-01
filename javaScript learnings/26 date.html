@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <script>
+        // toLocaleTimeString()
+        // toLocaleDateString()
+        // toLocaleString()
+        //getHours()
+        //getMinutes
+        //getSeconds()
+
+        function displayDate(){
+            var d = new Date(); 
+            var x = d.toLocaleTimeString(); 
+            document.getElementById("dateinfo").innerHTML =d ;
+        }
+
+        function continousDisplay(){
+            setInterval(displayDate,1000);
+        }
+
+    </script>
+</head>
+<body onload="continousDisplay()"> current date: 
+    <p id="dateinfo">
+        
+    </p>
+</body>
+</html>
